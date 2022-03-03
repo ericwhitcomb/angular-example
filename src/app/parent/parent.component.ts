@@ -28,9 +28,10 @@ export class ParentComponent
     OnDestroy
 {
   counter: number;
+  flag: boolean;
   showLogs: boolean = true;
 
-  // click handler to cause state change for showing loop inside component lifecycle
+  // click handlers to cause state change for showing loop inside component lifecycle
   incrementCounter(): void {
     if (this.showLogs) console.log('Parent: incrementCounter()');
     this.counter = this.counter + 1;
@@ -41,10 +42,17 @@ export class ParentComponent
     this.counter = this.counter - 1;
   }
 
+  toggleFlag(event): void {
+    if (this.showLogs) console.log('Parent: toggleFlag()');
+    console.log(event);
+    this.flag = !this.flag;
+  }
+
   // all component lifecycle methods in order
   constructor() {
     if (this.showLogs) console.log('Parent: Constructor()');
     this.counter = 0;
+    this.flag = true;
   }
 
   ngOnInit(): void {
