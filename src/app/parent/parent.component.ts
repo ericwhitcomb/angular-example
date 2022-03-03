@@ -28,6 +28,7 @@ export class ParentComponent
     OnDestroy
 {
   counter: number;
+  date: Date;
   flag: boolean;
   showLogs: boolean = true;
 
@@ -53,6 +54,7 @@ export class ParentComponent
     if (this.showLogs) console.log('Parent: Constructor()');
     this.counter = 0;
     this.flag = true;
+    this.date = new Date();
   }
 
   ngOnInit(): void {

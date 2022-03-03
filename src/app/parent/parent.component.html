@@ -1,6 +1,17 @@
+<app-hello-world></app-hello-world>
+
 <app-child [count]="counter">
   <button incButton (click)="incrementCounter()">+</button>
   <button decButton (click)="decrementCounter()">-</button>
 </app-child>
 
 <button (click)="toggleFlag($event)">Toggle: {{ flag }}</button>
+
+<p>date (without pipe):<br />{{ date }}</p>
+<p>date (with pipe):<br />{{ date | date }}</p>
+<p>
+  date (with pipe & custom formatting):<br />{{ date | date: "EEEE MMMM d y" }}
+</p>
+<p>
+  date (chaining pipes):<br />{{ date | date: "EEEE MMMM d y" | uppercase }}
+</p>
