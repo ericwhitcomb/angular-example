@@ -6,14 +6,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./child.component.css'],
 })
 export class ChildComponent implements OnInit {
-  @Input() childMessage: string;
-  @Output() eventMessage = new EventEmitter<string>();
+  message = 'message from child!';
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  sendMessage(): void {
-    this.eventMessage.emit('Hello from child');
-  }
 }

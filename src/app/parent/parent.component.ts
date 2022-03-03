@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { ChildComponent } from '../child/child.component';
 
 @Component({
   selector: 'app-parent',
@@ -6,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css'],
 })
 export class ParentComponent implements OnInit {
+  @ViewChild(ChildComponent) child;
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  receiveMessage(msg): void {
-    alert(msg);
+  ngAfterViewInit(): void {
+    alert(this.child.message);
   }
 }

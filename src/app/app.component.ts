@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 @Component({
@@ -6,19 +6,10 @@ import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
   title: 'angular-example';
-  intervalSub: ReturnType<typeof setInterval>;
 
-  ngOnInit(): void {
-    this.intervalSub = setInterval(() => {
-      console.log('Hello from ngOnInit');
-    }, 1000);
-  }
+  constructor() {}
 
-  ngOnDestroy(): void {
-    if (this.intervalSub) {
-      clearInterval(this.intervalSub);
-    }
-  }
+  ngOnInit(): void {}
 }
