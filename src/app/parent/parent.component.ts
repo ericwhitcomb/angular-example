@@ -28,7 +28,7 @@ export class ParentComponent
     OnDestroy
 {
   counter: number;
-  showLogs: boolean = false;
+  showLogs: boolean = true;
 
   // click handler to cause state change for showing loop inside component lifecycle
   incrementCounter(): void {

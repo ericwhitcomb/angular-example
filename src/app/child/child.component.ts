@@ -42,6 +42,7 @@ export class ChildComponent
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.showLogs) console.log('Child: OnChanges()');
+    console.log(changes);
   }
 
   ngDoCheck(): void {
