@@ -9,7 +9,12 @@ import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 export class AppComponent implements OnInit {
   title: 'angular-example';
 
-  constructor() {}
+  // all component lifecycle methods in order
+  constructor() {
+    console.log('App: Constructor()');
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('App: OnInit()');
+  }
 }
