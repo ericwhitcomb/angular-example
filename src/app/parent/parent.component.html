@@ -1,2 +1,4 @@
-<app-child [count]="counter"></app-child>
-<button (click)="incrementCounter()">+</button>
+<app-child [count]="counter">
+  <button incButton (click)="incrementCounter()">+</button>
+  <button decButton (click)="decrementCounter()">-</button>
+</app-child>

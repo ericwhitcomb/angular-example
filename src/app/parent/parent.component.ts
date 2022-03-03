@@ -36,6 +36,11 @@ export class ParentComponent
     this.counter = this.counter + 1;
   }
 
+  decrementCounter(): void {
+    if (this.showLogs) console.log('Parent: decrementCounter()');
+    this.counter = this.counter - 1;
+  }
+
   // all component lifecycle methods in order
   constructor() {
     if (this.showLogs) console.log('Parent: Constructor()');
