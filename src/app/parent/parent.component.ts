@@ -27,10 +27,15 @@ export class ParentComponent
     AfterViewChecked,
     OnDestroy
 {
+  showLogs: boolean = true;
   counter: number;
   date: Date;
   flag: boolean;
-  showLogs: boolean = true;
+  imageUrl: string;
+  columnA: number;
+  columnB: number;
+  columnC: number;
+  isUnchanged: boolean;
 
   // click handlers to cause state change for showing loop inside component lifecycle
   incrementCounter(): void {
@@ -55,6 +60,11 @@ export class ParentComponent
     this.counter = 0;
     this.flag = true;
     this.date = new Date();
+    this.imageUrl = '../../assets/puppy-icon.png';
+    this.columnA = 1;
+    this.columnB = 2;
+    this.columnC = 4;
+    this.isUnchanged = true;
   }
 
   ngOnInit(): void {

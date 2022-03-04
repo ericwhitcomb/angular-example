@@ -15,3 +15,23 @@
 <p>
   date (chaining pipes):<br />{{ date | date: "EEEE MMMM d y" | uppercase }}
 </p>
+<p>
+  <img [src]="imageUrl" />
+</p>
+<table>
+  <tr>
+    <td class="red" [colSpan]="columnA">1 column</td>
+    <td class="red" [colSpan]="columnA">1 column</td>
+    <td class="red" [colSpan]="columnA">1 column</td>
+    <td class="red" [colSpan]="columnA">1 column</td>
+  </tr>
+  <tr>
+    <td class="green" [colSpan]="columnB">2 column</td>
+    <td class="green" [colSpan]="columnB">2 column</td>
+  </tr>
+  <tr>
+    <td class="blue" [colSpan]="columnC">4 column</td>
+  </tr>
+</table>
+
+<button [disabled]="isUnchanged">Disabled</button>
