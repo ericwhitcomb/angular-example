@@ -1,5 +1,9 @@
 @import "../../assets/style.css";
 
+div {
+  display: block;
+}
+
 td {
   text-align: center;
   color: white;
@@ -15,4 +19,8 @@ td {
 
 .blue {
   background-color: blue;
+}
+
+.text-center {
+  text-align: center;
 }

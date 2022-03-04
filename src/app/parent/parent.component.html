@@ -35,3 +35,10 @@
 </table>
 
 <button [disabled]="isUnchanged">Disabled</button>
+
+<br />
+
+<div [class.text-center]="textCentered" [style.backgroundColor]="'orange'">
+  Attribute, Class, and Style Binding<br />
+  <img [src]="imageUrl" [attr.width]="'100'" [attr.height]="'100'" />
+</div>

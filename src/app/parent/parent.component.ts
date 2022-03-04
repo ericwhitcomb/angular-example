@@ -36,6 +36,7 @@ export class ParentComponent
   columnB: number;
   columnC: number;
   isUnchanged: boolean;
+  textCentered: boolean;
 
   // click handlers to cause state change for showing loop inside component lifecycle
   incrementCounter(): void {
@@ -65,6 +66,7 @@ export class ParentComponent
     this.columnB = 2;
     this.columnC = 4;
     this.isUnchanged = true;
+    this.textCentered = true;
   }
 
   ngOnInit(): void {
