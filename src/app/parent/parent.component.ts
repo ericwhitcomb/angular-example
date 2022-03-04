@@ -38,7 +38,7 @@ export class ParentComponent
   isUnchanged: boolean;
   textCentered: boolean;
 
-  // click handlers to cause state change for showing loop inside component lifecycle
+  // event handlers to cause state change for showing loop inside component lifecycle
   incrementCounter(): void {
     if (this.showLogs) console.log('Parent: incrementCounter()');
     this.counter = this.counter + 1;
@@ -47,6 +47,11 @@ export class ParentComponent
   decrementCounter(): void {
     if (this.showLogs) console.log('Parent: decrementCounter()');
     this.counter = this.counter - 1;
+  }
+
+  childRequestHandler(child): void {
+    if (this.showLogs) console.log('Parent: childRequestHandler()');
+    console.log(child);
   }
 
   toggleFlag(event): void {

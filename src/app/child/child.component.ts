@@ -10,6 +10,8 @@ import {
   OnDestroy,
   SimpleChanges,
   Input,
+  Output,
+  EventEmitter,
 } from '@angular/core';
 
 @Component({
@@ -30,6 +32,14 @@ export class ChildComponent
 {
   showLogs: boolean = true;
   @Input() count: number;
+  @Output() childRequest = new EventEmitter<string>();
+
+  // event handlers
+  handler(event): void {
+    if (this.showLogs) console.log('Child: handler()');
+    console.log(event);
+    this.childRequest.emit('Child Request');
+  }
 
   // all component lifecycle methods in order
   constructor() {

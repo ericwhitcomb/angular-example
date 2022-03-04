@@ -1,6 +1,6 @@
 <app-hello-world></app-hello-world>
 
-<app-child [count]="counter">
+<app-child [count]="counter" (childRequest)="childRequestHandler($event)">
   <button incButton (click)="incrementCounter()">+</button>
   <button decButton (click)="decrementCounter()">-</button>
 </app-child>
