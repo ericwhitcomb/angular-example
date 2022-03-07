@@ -42,3 +42,9 @@
   Attribute, Class, and Style Binding<br />
   <img [src]="imageUrl" [attr.width]="'100'" [attr.height]="'100'" />
 </div>
+
+<br />
+<div class="sizerBox">
+  <div [style.font-size.px]="fontSizepx">Parent Text</div>
+  <app-sizer [(size)]="fontSizepx"></app-sizer>
+</div>
